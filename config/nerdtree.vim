@@ -14,3 +14,5 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusShowIgnored = 1
+
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
