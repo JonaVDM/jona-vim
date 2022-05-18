@@ -10,6 +10,7 @@ set autoindent
 set ts=2
 set sw=2
 set et
+set splitright
 
 if has("mouse")
 	set mouse=a

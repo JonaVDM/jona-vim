@@ -2,22 +2,34 @@ let mapleader = ','
 call plug#begin('~/.config/nvim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
-source ~/.config/nvim/config/nerdtree.vim
+
 source ~/.config/nvim/config/scope.vim
 source ~/.config/nvim/config/git.vim
+source ~/.config/nvim/config/dashboard.vim
 
-" Devicons for nerdtree/vim-airline
-Plug 'ryanoasis/vim-devicons'
+" Commenter
+source ~/.config/nvim/config/comments.vim
 
 " Setup LSP
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
-call plug#end()
-lua require('completion')
 
-lua require('scope')
+" The requirements for the tree
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+
+" Devicons for nerdtree/vim-airline
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
+
+lua << EOF
+require('completion')
+require('scope')
+require('tree')
+EOF
 
 colorscheme nord
 let g:airline#extensions#tabline#enabled = 1

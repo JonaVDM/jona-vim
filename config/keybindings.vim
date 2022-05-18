@@ -1,4 +1,4 @@
-nnoremap <leader>j <C-W><C-J>
-nnoremap <leader>k <C-W><C-K>
-nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>h <C-W><C-H>
+nnoremap <c-j> <C-W><C-J>
+nnoremap <c-k> <C-W><C-K>
+nnoremap <c-l> <C-W><C-L>
+nnoremap <c-h> <C-W><C-H>
