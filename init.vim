@@ -17,6 +17,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'onsails/lspkind.nvim'
+Plug 'tami5/lspsaga.nvim'
 
 " The requirements for the tree
 Plug 'kyazdani42/nvim-web-devicons'
