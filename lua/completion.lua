@@ -63,7 +63,10 @@ cmp.setup {
       mode = 'symbol',
       maxwidth = 50,
     })
-  }
+  },
+  experimental = {
+    ghost_text = true,
+  },
 }
 
 local lspsage = require 'lspsaga'

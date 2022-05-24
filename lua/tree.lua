@@ -10,12 +10,8 @@ require'nvim-tree'.setup {
     view = {
         side = 'left',
     },
-    git = {
-        enable = true,
-        ignore = false,
-        timeout = 400,
-    },
 }
+vim.api.nvim_set_keymap("n", "<c-n>", "<cmd>NvimTreeFindFile<cr>", { noremap=true })
 vim.api.nvim_create_autocmd("BufEnter", {
   nested = true,
   callback = function()
