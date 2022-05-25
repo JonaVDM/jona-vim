@@ -122,3 +122,12 @@ lspsage.setup {
 
 -- Remove the text hint
 vim.diagnostic.config({virtual_text = false})
+
+lsp.efm.setup {
+  settings = {
+    rootMarkers = {".git/"},
+    languages = {
+      python = { require 'efm/flake8' }
+    }
+  }
+}
