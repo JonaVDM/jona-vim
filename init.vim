@@ -35,6 +35,7 @@ Plug 'ryanoasis/vim-devicons'
 " Go development
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 call plug#end()
 
 lua << EOF
@@ -43,10 +44,10 @@ require 'scope'
 require 'tree'
 require 'git'
 require 'dashboard'
+require 'bars'
 EOF
 
 colorscheme nord
-let g:airline#extensions#tabline#enabled = 1
 
 set encoding=UTF-8
 source ~/.config/nvim/config/vars.vim
