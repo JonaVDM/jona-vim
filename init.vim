@@ -4,7 +4,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 
 source ~/.config/nvim/config/scope.vim
-source ~/.config/nvim/config/dashboard.vim
+Plug 'glepnir/dashboard-nvim'
 
 " Commenter
 source ~/.config/nvim/config/comments.vim
@@ -38,10 +38,11 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 lua << EOF
-require('completion')
-require('scope')
-require('tree')
-require('git')
+require 'completion'
+require 'scope'
+require 'tree'
+require 'git'
+require 'dashboard'
 EOF
 
 colorscheme nord
