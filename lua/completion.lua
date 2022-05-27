@@ -1,16 +1,20 @@
 require 'nvim-lsp-installer'.setup {}
 local lsp = require 'lspconfig'
+local formatter = require 'lsp-format'
 
-local function on_attach ()
+formatter.setup {}
+
+local function on_attach(client)
+  formatter.on_attach(client)
   local map = vim.api.nvim_buf_set_keymap
 
-  map(0, "n", "gr", "<cmd>Lspsaga rename<cr>", {silent = true, noremap = true})
-  map(0, "n", "gx", "<cmd>Lspsaga code_action<cr>", {silent = true, noremap = true})
-  map(0, "x", "gx", ":<c-u>Lspsaga range_code_action<cr>", {silent = true, noremap = true})
-  map(0, "n", "K",  "<cmd>Lspsaga hover_doc<cr>", {silent = true, noremap = true})
-  map(0, "n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", {silent = true, noremap = true})
-  map(0, "n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", {silent = true, noremap = true})
-  map(0, "n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {silent = true, noremap = true})
+  map(0, "n", "gr", "<cmd>Lspsaga rename<cr>", { silent = true, noremap = true })
+  map(0, "n", "gx", "<cmd>Lspsaga code_action<cr>", { silent = true, noremap = true })
+  map(0, "x", "gx", ":<c-u>Lspsaga range_code_action<cr>", { silent = true, noremap = true })
+  map(0, "n", "K", "<cmd>Lspsaga hover_doc<cr>", { silent = true, noremap = true })
+  map(0, "n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", { silent = true, noremap = true })
+  map(0, "n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", { silent = true, noremap = true })
+  map(0, "n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", { silent = true, noremap = true })
   map(0, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
   map(0, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
 end
@@ -121,13 +125,23 @@ lspsage.setup {
 }
 
 -- Remove the text hint
-vim.diagnostic.config({virtual_text = false})
+vim.diagnostic.config({ virtual_text = false })
+
+-- Took some (aka a lot) inspiration from
+-- https://github.com/lukas-reineke/dotfiles
+local flake8 = require 'efm.flake8'
+local autopep8 = require 'efm.autopep8'
+local eslint = require 'efm.eslint'
+local prettier = require 'efm.prettier'
 
 lsp.efm.setup {
+  on_attach = on_attach,
+  init_options = { documentFormatting = true },
   settings = {
-    rootMarkers = {".git/"},
+    rootMarkers = { ".git/" },
     languages = {
-      python = { require 'efm/flake8' }
+      python = { flake8, autopep8 },
+      typescript = { eslint, prettier }
     }
   }
 }
