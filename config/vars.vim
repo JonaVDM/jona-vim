@@ -18,3 +18,5 @@ endif
 set mousehide
 filetype plugin on
 set updatetime=300
+set nohlsearch
+set colorcolumn=80,120

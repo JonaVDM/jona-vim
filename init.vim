@@ -4,7 +4,6 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 
 source ~/.config/nvim/config/scope.vim
-source ~/.config/nvim/config/git.vim
 source ~/.config/nvim/config/dashboard.vim
 
 " Commenter
@@ -26,6 +25,10 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'jiangmiao/auto-pairs'
 
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'lewis6991/gitsigns.nvim'
+
 " Devicons for nerdtree/vim-airline
 Plug 'ryanoasis/vim-devicons'
 
@@ -38,6 +41,7 @@ lua << EOF
 require('completion')
 require('scope')
 require('tree')
+require('git')
 EOF
 
 colorscheme nord
