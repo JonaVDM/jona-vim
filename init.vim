@@ -4,7 +4,9 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 
 source ~/.config/nvim/config/scope.vim
-Plug 'glepnir/dashboard-nvim'
+Plug 'AckslD/nvim-neoclip.lua'
+" Plug 'glepnir/dashboard-nvim'
+Plug 'goolord/alpha-nvim'
 
 " Commenter
 source ~/.config/nvim/config/comments.vim
@@ -33,7 +35,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'ryanoasis/vim-devicons'
 
 " Go development
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 call plug#end()
