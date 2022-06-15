@@ -20,7 +20,8 @@ local function on_attach(client)
 end
 
 -- Setup languages that do not have any specific settings
-local languages = { 'pyright', 'tsserver', 'gopls', 'ansiblels', 'sumneko_lua', 'rust_analyzer', 'dockerls', 'volar' }
+local languages = { 'pyright', 'tsserver', 'eslint', 'gopls', 'ansiblels', 'sumneko_lua', 'rust_analyzer', 'dockerls',
+  'yamlls', 'volar' }
 for _, lang in ipairs(languages) do
   lsp[lang].setup {
     on_attach = on_attach,
@@ -141,7 +142,7 @@ lsp.efm.setup {
     rootMarkers = { ".git/" },
     languages = {
       python = { flake8, autopep8 },
-      typescript = { eslint, prettier }
+      typescript = { eslint }
     }
   }
 }
