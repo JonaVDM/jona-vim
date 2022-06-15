@@ -7,6 +7,7 @@ source ~/.config/nvim/config/scope.vim
 Plug 'AckslD/nvim-neoclip.lua'
 " Plug 'glepnir/dashboard-nvim'
 Plug 'goolord/alpha-nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Commenter
 source ~/.config/nvim/config/comments.vim
@@ -47,6 +48,7 @@ require 'tree'
 require 'git'
 require 'dashboard'
 require 'bars'
+require 'plugins.treesitter'
 EOF
 
 colorscheme nord

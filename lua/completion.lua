@@ -20,7 +20,7 @@ local function on_attach(client)
 end
 
 -- Setup languages that do not have any specific settings
-local languages = { 'pyright', 'tsserver', 'gopls', 'ansiblels', 'sumneko_lua', 'rust_analyzer', 'dockerls' }
+local languages = { 'pyright', 'tsserver', 'gopls', 'ansiblels', 'sumneko_lua', 'rust_analyzer', 'dockerls', 'volar' }
 for _, lang in ipairs(languages) do
   lsp[lang].setup {
     on_attach = on_attach,
