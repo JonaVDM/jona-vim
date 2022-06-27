@@ -1,4 +1,3 @@
-require 'completion'
-
-require 'settings'
 require 'plugins'
+require 'lsp'
+require 'settings'
