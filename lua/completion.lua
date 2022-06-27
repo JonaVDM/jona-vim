@@ -15,13 +15,14 @@ local function on_attach(client)
   map(0, "n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", { silent = true, noremap = true })
   map(0, "n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", { silent = true, noremap = true })
   map(0, "n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", { silent = true, noremap = true })
+  map(0, "n", "gd", "<cmd>Lspsaga preview_definition<CR>", { silent = true, noremap = true })
   map(0, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
   map(0, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
 end
 
 -- Setup languages that do not have any specific settings
 local languages = { 'pyright', 'tsserver', 'eslint', 'gopls', 'ansiblels', 'sumneko_lua', 'rust_analyzer', 'dockerls',
-  'yamlls', 'volar' }
+  'yamlls', 'volar', 'ccls', 'omnisharp' }
 for _, lang in ipairs(languages) do
   lsp[lang].setup {
     on_attach = on_attach,
@@ -37,8 +38,6 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ['<leader>d'] = cmp.mapping.scroll_docs(-4),
-    ['<leader>f'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-R>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
@@ -133,7 +132,6 @@ vim.diagnostic.config({ virtual_text = false })
 local flake8 = require 'efm.flake8'
 local autopep8 = require 'efm.autopep8'
 local eslint = require 'efm.eslint'
-local prettier = require 'efm.prettier'
 
 lsp.efm.setup {
   on_attach = on_attach,

@@ -39,6 +39,8 @@ Plug 'ryanoasis/vim-devicons'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+
+Plug 'folke/which-key.nvim'
 call plug#end()
 
 lua << EOF
@@ -49,6 +51,7 @@ require 'git'
 require 'dashboard'
 require 'bars'
 require 'plugins.treesitter'
+require 'plugins.which-key'
 EOF
 
 colorscheme nord
