@@ -1,0 +1,7 @@
+require 'plugins.treesitter'
+require 'plugins.which-key'
+require 'plugins.bufferline'
+require 'plugins.alpha'
+require 'plugins.gitsigns'
+require 'plugins.nvim-tree'
+require 'plugins.telescope'

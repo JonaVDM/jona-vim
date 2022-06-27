@@ -44,14 +44,7 @@ Plug 'folke/which-key.nvim'
 call plug#end()
 
 lua << EOF
-require 'completion'
-require 'scope'
-require 'tree'
-require 'git'
-require 'dashboard'
-require 'bars'
-require 'plugins.treesitter'
-require 'plugins.which-key'
+require 'init'
 EOF
 
 colorscheme nord

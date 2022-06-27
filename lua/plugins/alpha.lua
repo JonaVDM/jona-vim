@@ -16,15 +16,6 @@ local melon = {
   [[             ██████████           ]]
 }
 
-local cat = {
-  [[                                 ]],
-  [[  Zzzzz  |\      _,,,--,,_       ]],
-  [[         /,`.-'`'   ._  \-;;,_   ]],
-  [[        |,4-  ) )_   .;.(  `'-'  ]],
-  [[       '---''(_/._)-'(_\_)       ]],
-  [[                                 ]]
-}
-
 local dash = require 'alpha.themes.dashboard'
 dash.section.header.val = melon
 

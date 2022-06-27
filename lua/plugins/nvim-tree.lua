@@ -1,4 +1,3 @@
--- Setup a file tree
 require 'nvim-tree'.setup {
   open_on_setup = true,
   open_on_tab = true,
