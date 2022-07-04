@@ -7,8 +7,12 @@ require 'nvim-tree'.setup {
     }
   },
   view = {
-    side = 'left',
+    adaptive_size = true,
+    side = "left",
+    width = 25,
+    hide_root_folder = true,
   },
+  hijack_cursor = true,
 }
 vim.api.nvim_set_keymap("n", "<c-n>", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 vim.api.nvim_create_autocmd("BufEnter", {
