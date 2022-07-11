@@ -1,5 +1,5 @@
 local telescope = require 'telescope'
-telescope.load_extension('neoclip')
+-- telescope.load_extension('neoclip')
 telescope.setup {
   defaults = {
     file_ignore_patterns = { "node_modules", "plugged" },
@@ -11,4 +11,4 @@ telescope.setup {
   },
 }
 
-require 'neoclip'.setup()
+-- require 'neoclip'.setup()

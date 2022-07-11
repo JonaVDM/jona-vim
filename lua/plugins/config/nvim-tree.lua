@@ -14,7 +14,7 @@ require 'nvim-tree'.setup {
   },
   hijack_cursor = true,
 }
-vim.api.nvim_set_keymap("n", "<c-n>", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<c-b>", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 vim.api.nvim_create_autocmd("BufEnter", {
   nested = true,
   callback = function()

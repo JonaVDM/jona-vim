@@ -47,3 +47,5 @@ require 'lspsaga'.setup {
   diagnostic_message_format = "%m %c",
   highlight_prefix = false,
 }
+-- please make this end
+vim.diagnostic.config({ virtual_text = false })
