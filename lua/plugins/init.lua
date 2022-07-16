@@ -133,6 +133,10 @@ packer.startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
+    requires = {
+      'windwp/nvim-ts-autotag',
+      'RRethy/nvim-treesitter-endwise'
+    },
     config = function()
       require 'plugins.config.treesitter'
     end
@@ -147,6 +151,12 @@ packer.startup(function(use)
     'numToStr/Comment.nvim',
     config = function()
       require 'Comment'.setup()
+    end
+  }
+  use {
+    'windwp/nvim-autopairs',
+    config = function()
+      require 'nvim-autopairs'.setup {}
     end
   }
 end)
