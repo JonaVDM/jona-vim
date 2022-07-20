@@ -35,7 +35,12 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Theme/ui stuff
-  use 'arcticicestudio/nord-vim'
+  use {
+    'arcticicestudio/nord-vim',
+    config = function()
+      vim.cmd [[colorscheme nord]]
+    end
+  }
   use {
     'goolord/alpha-nvim',
     config = function()
@@ -103,13 +108,13 @@ packer.startup(function(use)
   -- Lsp
   use {
     'williamboman/nvim-lsp-installer',
-    config = function ()
+    config = function()
       require 'nvim-lsp-installer'.setup {}
     end
   }
   use {
     'lukas-reineke/lsp-format.nvim',
-    config = function ()
+    config = function()
       require 'lsp-format'.setup {}
     end
   }
@@ -124,7 +129,7 @@ packer.startup(function(use)
       'hrsh7th/cmp-nvim-lsp-signature-help',
       'williamboman/nvim-lsp-installer'
     },
-    config = function ()
+    config = function()
       require 'lsp'
     end
   }
