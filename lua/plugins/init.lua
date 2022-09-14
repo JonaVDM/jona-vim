@@ -107,12 +107,6 @@ packer.startup(function(use)
 
   -- Lsp
   use {
-    'williamboman/nvim-lsp-installer',
-    config = function()
-      require 'nvim-lsp-installer'.setup {}
-    end
-  }
-  use {
     'lukas-reineke/lsp-format.nvim',
     config = function()
       require 'lsp-format'.setup {}
@@ -128,7 +122,6 @@ packer.startup(function(use)
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-nvim-lsp-signature-help',
       'williamboman/nvim-lsp-installer',
-
       'hrsh7th/vim-vsnip',
       'hrsh7th/vim-vsnip-integ',
       'hrsh7th/cmp-vsnip',
