@@ -1,4 +1,5 @@
 set number
+set relativenumber
 set numberwidth=3
 set textwidth=0
 set nowrap
