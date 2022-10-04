@@ -122,9 +122,9 @@ packer.startup(function(use)
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-nvim-lsp-signature-help',
       'williamboman/nvim-lsp-installer',
-      'hrsh7th/vim-vsnip',
-      'hrsh7th/vim-vsnip-integ',
-      'hrsh7th/cmp-vsnip',
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip',
+      'honza/vim-snippets',
     },
     config = function()
       require 'lsp'

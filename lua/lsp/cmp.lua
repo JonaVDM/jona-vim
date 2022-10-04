@@ -1,9 +1,12 @@
 local cmp = require 'cmp'
 local lspkind = require 'lspkind'
+local luasnip = require 'luasnip'
+
+
 cmp.setup {
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      luasnip.lsp_expand(args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -30,8 +33,8 @@ cmp.setup {
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
   }),
   sources = cmp.config.sources({
+    { name = 'luasnip' }, -- For luasnip users.
     { name = 'nvim_lsp' },
-    { name = 'vsnip' }, -- For vsnip users.
     { name = 'nvim_lsp_signature_help' }
   }, {
     { name = 'buffer' },
@@ -46,3 +49,13 @@ cmp.setup {
     ghost_text = true,
   },
 }
+
+local options = {
+  history = true,
+  updateevents = "TextChanged,TextChangedI",
+}
+
+luasnip.config.set_config(options)
+
+require("luasnip.loaders.from_snipmate").lazy_load({ paths = vim.fn.stdpath('data') ..
+    '/site/pack/packer/start/vim-snippets/snippets' })
