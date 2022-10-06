@@ -131,6 +131,13 @@ packer.startup(function(use)
     end
   }
 
+  -- Org mode
+  use { 'nvim-orgmode/orgmode',
+    config = function()
+      require 'plugins.config.org'
+    end
+  }
+
   -- Other
   use {
     'nvim-treesitter/nvim-treesitter',
