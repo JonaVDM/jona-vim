@@ -67,6 +67,12 @@ packer.startup(function(use)
       require 'plugins.config.bufferline'
     end
   }
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+      require 'indent_blankline'.setup()
+    end
+  }
 
   -- telescope
   use {
