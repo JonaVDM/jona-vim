@@ -24,3 +24,4 @@ set colorcolumn=80,120
 set laststatus=3
 au BufRead,BufNewFile */Code/Plays/*.yml set filetype=yaml.ansible
 au BufRead,BufNewFile */Code/Plays/*.config.yml set filetype=yaml
+au BufRead,BufnewFile *.java set expandtab ts=4 sw=4 ai
