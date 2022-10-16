@@ -25,3 +25,6 @@ set laststatus=3
 au BufRead,BufNewFile */Code/Plays/*.yml set filetype=yaml.ansible
 au BufRead,BufNewFile */Code/Plays/*.config.yml set filetype=yaml
 au BufRead,BufnewFile *.java set expandtab ts=4 sw=4 ai
+
+command WT lua require 'telescope'.extensions.git_worktree.git_worktrees()
+command WTA lua require 'telescope'.extensions.git_worktree.create_git_worktree()

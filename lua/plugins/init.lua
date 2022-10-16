@@ -110,6 +110,14 @@ packer.startup(function(use)
     end
   }
   use 'tpope/vim-fugitive'
+  use {
+    'ThePrimeagen/git-worktree.nvim',
+    requires = { 'nvim-telescope/telescope.nvim' },
+    config = function()
+      require 'telescope'.load_extension 'git_worktree'
+      require 'plugins.config.worktree'
+    end
+  }
 
   -- Lsp
   use {
