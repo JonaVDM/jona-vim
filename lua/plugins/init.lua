@@ -138,9 +138,16 @@ packer.startup(function(use)
   }
 
   -- Org mode
-  use { 'nvim-orgmode/orgmode',
+  use {
+    'nvim-orgmode/orgmode',
     config = function()
       require 'plugins.config.org'
+    end
+  }
+  use {
+    'akinsho/org-bullets.nvim',
+    config = function()
+      require 'org-bullets'.setup()
     end
   }
 
