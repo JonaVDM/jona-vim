@@ -1,8 +1,8 @@
 local treesitter = require 'nvim-treesitter.configs'
 
 treesitter.setup({
+  ensure_installed = { 'org', 'lua', 'rust', 'java', 'javascript', 'typescript', 'go' },
   highlight = {
-    ensure_installed = 'org',
     enable = true,
     additional_vim_regex_highlighting = { 'org' },
   },
