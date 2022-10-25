@@ -73,6 +73,14 @@ packer.startup(function(use)
       require 'indent_blankline'.setup()
     end
   }
+  use {
+    'rcarriga/nvim-notify',
+    requires = { 'nvim-telescope/telescope.nvim' },
+    config = function()
+      vim.notify = require 'notify'
+      require 'telescope'.load_extension 'notify'
+    end
+  }
 
   -- telescope
   use {
