@@ -197,4 +197,10 @@ packer.startup(function(use)
       require 'nvim-autopairs'.setup {}
     end
   }
+  use {
+    'ThePrimeagen/harpoon',
+    config = function()
+      require 'plugins.config.harpoon'
+    end
+  }
 end)
