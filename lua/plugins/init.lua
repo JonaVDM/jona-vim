@@ -173,7 +173,8 @@ packer.startup(function(use)
     run = ':TSUpdate',
     requires = {
       'windwp/nvim-ts-autotag',
-      'RRethy/nvim-treesitter-endwise'
+      'RRethy/nvim-treesitter-endwise',
+      'nvim-treesitter/playground'
     },
     config = function()
       require 'plugins.config.treesitter'
