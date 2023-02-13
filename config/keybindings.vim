@@ -4,3 +4,5 @@ nnoremap <c-l> <C-W><C-L>
 nnoremap <c-h> <C-W><C-H>
 nnoremap <leader>p <cmd>Telescope find_files<cr>
 nnoremap <leader>i <cmd>Telescope neoclip<cr>
+
+vnoremap <leader>y "+y
