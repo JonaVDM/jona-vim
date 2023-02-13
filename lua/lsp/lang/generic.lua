@@ -10,9 +10,9 @@ local languages = {
   'rust_analyzer',
   'dockerls',
   'yamlls',
-  'ccls',
   'jdtls',
-  'svelte'
+  'svelte',
+  'phpactor'
 }
 
 for _, lang in ipairs(languages) do
