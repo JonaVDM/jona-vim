@@ -144,10 +144,12 @@ packer.startup(function(use)
       'onsails/lspkind.nvim',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-nvim-lsp-signature-help',
-      'williamboman/nvim-lsp-installer',
       'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip',
       'honza/vim-snippets',
+
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
     },
     config = function()
       require 'lsp'
