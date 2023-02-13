@@ -36,9 +36,10 @@ packer.startup(function(use)
 
   -- Theme/ui stuff
   use {
-    'arcticicestudio/nord-vim',
+    "catppuccin/nvim",
+    as = "catppuccin",
     config = function()
-      vim.cmd [[colorscheme nord]]
+      vim.cmd.colorscheme "catppuccin"
     end
   }
   use {
