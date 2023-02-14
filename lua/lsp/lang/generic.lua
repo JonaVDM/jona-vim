@@ -12,7 +12,8 @@ local languages = {
   'yamlls',
   'jdtls',
   'svelte',
-  'phpactor'
+  'phpactor',
+  'tailwindcss'
 }
 
 for _, lang in ipairs(languages) do
