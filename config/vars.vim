@@ -1,6 +1,6 @@
 set number
 set relativenumber
-set numberwidth=3
+set numberwidth=4
 set textwidth=0
 set nowrap
 set showcmd
