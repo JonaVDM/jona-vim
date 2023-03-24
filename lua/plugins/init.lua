@@ -156,6 +156,17 @@ packer.startup(function(use)
     end
   }
 
+  -- copilot (testing)
+  use {
+    'github/copilot.vim',
+    config = function ()
+      vim.api.nvim_set_keymap("i", "<C-J>", "coplilot#Accept('<CR>')", { silent = true, script=true })
+      vim.g.copilot_no_tab_map = true
+      -- imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+      -- let g:copilot_no_tab_map = v:true
+    end
+  }
+
   -- Org mode
   use {
     'nvim-orgmode/orgmode',
@@ -206,5 +217,8 @@ packer.startup(function(use)
     config = function()
       require 'plugins.config.harpoon'
     end
+  }
+  use {
+    'editorconfig/editorconfig-vim'
   }
 end)

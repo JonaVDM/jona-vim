@@ -3,6 +3,7 @@
 local flake8 = require 'lsp.efm.flake8'
 local autopep8 = require 'lsp.efm.autopep8'
 local eslint = require 'lsp.efm.eslint'
+local prettier = require 'lsp.efm.prettier'
 
 local util = require 'lsp.util'
 
@@ -13,7 +14,7 @@ require 'lspconfig'.efm.setup {
     rootMarkers = { ".git/" },
     languages = {
       python = { flake8, autopep8 },
-      typescript = { eslint },
+      typescript = { eslint, prettier },
       typescriptreact = { eslint },
     }
   }

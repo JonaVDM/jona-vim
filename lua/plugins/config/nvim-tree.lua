@@ -6,9 +6,9 @@ require 'nvim-tree'.setup {
     }
   },
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
     side = "left",
-    width = 25,
+    width = 30,
     hide_root_folder = true,
   },
   hijack_cursor = true,
