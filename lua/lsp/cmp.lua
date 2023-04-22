@@ -2,7 +2,6 @@ local cmp = require 'cmp'
 local lspkind = require 'lspkind'
 local luasnip = require 'luasnip'
 
-
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -58,5 +57,7 @@ local options = {
 
 luasnip.config.set_config(options)
 
-require("luasnip.loaders.from_snipmate").lazy_load({ paths = vim.fn.stdpath('data') ..
-    '/site/pack/packer/start/vim-snippets/snippets' })
+require("luasnip.loaders.from_snipmate").lazy_load({ paths = {
+  vim.fn.stdpath('data') .. '/site/pack/packer/start/vim-snippets/snippets',
+  vim.fn.stdpath('config') .. '/snippets'
+}})
