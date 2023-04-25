@@ -221,4 +221,7 @@ packer.startup(function(use)
   use {
     'editorconfig/editorconfig-vim'
   }
+  use {
+    'christoomey/vim-tmux-navigator'
+  }
 end)
