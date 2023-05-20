@@ -13,7 +13,8 @@ local languages = {
   'jdtls',
   'svelte',
   'tailwindcss',
-  'intelephense'
+  'intelephense',
+  'volar'
 }
 
 for _, lang in ipairs(languages) do

@@ -10,6 +10,7 @@ require 'mason-lspconfig'.setup {
     'yamlls',
     'svelte',
     'efm',
-    'emmet_ls'
+    'emmet_ls',
+    'volar'
   }
 }
