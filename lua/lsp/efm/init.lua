@@ -14,7 +14,7 @@ require 'lspconfig'.efm.setup {
     rootMarkers = { ".git/" },
     languages = {
       python = { flake8, autopep8 },
-      typescript = { eslint, prettier },
+      typescript = { eslint },
       typescriptreact = { eslint },
     }
   }

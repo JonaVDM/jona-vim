@@ -8,6 +8,6 @@ nnoremap <leader><c-p> <cmd>Telescope live_grep<cr>
 
 vnoremap <leader>y "+y
 
-imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
+imap <silent><expr> <C-Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
 snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
 imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
