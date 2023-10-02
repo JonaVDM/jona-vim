@@ -12,7 +12,8 @@ treesitter.setup({
     'svelte',
     'html',
     'css',
-    'php'
+    'php',
+    'python'
   },
   highlight = {
     enable = true,

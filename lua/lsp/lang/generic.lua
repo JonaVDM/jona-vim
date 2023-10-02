@@ -2,7 +2,6 @@ local lsp = require 'lspconfig'
 local lsp_util = require 'lsp.util'
 
 local languages = {
-  'pyright',
   'tsserver',
   'eslint',
   'gopls',
@@ -14,7 +13,8 @@ local languages = {
   'svelte',
   'tailwindcss',
   'intelephense',
-  'volar'
+  'volar',
+  'jedi_language_server'
 }
 
 for _, lang in ipairs(languages) do

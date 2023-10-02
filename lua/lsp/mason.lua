@@ -11,6 +11,7 @@ require 'mason-lspconfig'.setup {
     'svelte',
     'efm',
     'emmet_ls',
-    'volar'
+    'volar',
+    'jedi-langauge-server'
   }
 }
