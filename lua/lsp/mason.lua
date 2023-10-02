@@ -12,6 +12,6 @@ require 'mason-lspconfig'.setup {
     'efm',
     'emmet_ls',
     'volar',
-    'jedi-langauge-server'
+    'jedi_language_server'
   }
 }
