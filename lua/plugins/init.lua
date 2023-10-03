@@ -224,4 +224,11 @@ packer.startup(function(use)
   use {
     'christoomey/vim-tmux-navigator'
   }
+  use {
+    'kkoomen/vim-doge',
+    run = ':call doge#install()',
+    config = function ()
+      require 'plugins.config.doge'
+    end
+  }
 end)
