@@ -14,8 +14,8 @@ local languages = {
   'tailwindcss',
   'intelephense',
   'volar',
-  'jedi_language_server',
-  'dartls'
+  'dartls',
+  'pylsp'
 }
 
 for _, lang in ipairs(languages) do

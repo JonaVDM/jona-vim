@@ -16,6 +16,7 @@ require 'lspconfig'.efm.setup {
       python = { flake8, autopep8 },
       typescript = { eslint },
       typescriptreact = { eslint },
+      vue = { eslint, prettier },
     }
   }
 }
