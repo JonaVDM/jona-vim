@@ -13,7 +13,6 @@ local languages = {
   'svelte',
   'tailwindcss',
   'intelephense',
-  'volar',
   'dartls',
   'pylsp'
 }
