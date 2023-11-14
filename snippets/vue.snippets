@@ -14,7 +14,7 @@ snippet scafold
 
 	</template>
 
-snippet scaflod-input
+snippet scaflodInput
 	<script setup lang="ts">
 	defineProps<{
 		modelValue: any;
@@ -24,5 +24,10 @@ snippet scaflod-input
 	</script>
 
 	<template>
-		<input :value="modelValue" @input="$emit('update:modelValue', ($event as any).target.value)" />
+		<input :value="modelValue" @input="\$emit('update:modelValue', (\$event as any).target.value)" />
 	</template>
+
+snippet formSubmit
+	function submit(event: Event) {
+		event.preventDefault();
+	}
