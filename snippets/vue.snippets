@@ -14,7 +14,7 @@ snippet scafold
 
 	</template>
 
-snippet scaflodInput
+snippet scafoldInput
 	<script setup lang="ts">
 	defineProps<{
 		modelValue: any;
@@ -26,6 +26,40 @@ snippet scaflodInput
 	<template>
 		<input :value="modelValue" @input="\$emit('update:modelValue', (\$event as any).target.value)" />
 	</template>
+
+snippet scafoldInputForm
+	<script setup lang="ts">
+	defineProps<{
+		modelValue: any;
+	}>();
+
+	defineEmits(['update:modelValue']);
+	</script>
+
+	<template>
+		<input :value="modelValue" @input="\$emit('update:modelValue', (\$event as any).target.value)" />
+
+    <form @submit="\$event.preventDefault()">
+
+		</form>
+	</template>
+
+snippet pocketbaseSubmit
+	async function submit(event: Event) {
+		event.preventDefault();
+
+		try {
+			errors.value = {};
+			const event = await pb.collection('$1').create(formdata);
+			router.push({ name: '$2' });
+		} catch (e) {
+			const { data } = (e as ClientResponseError).data;
+			for (let key in data) {
+				errors.value[key] = data[key].message;
+			}
+		}
+	}
+	
 
 snippet formSubmit
 	function submit(event: Event) {
