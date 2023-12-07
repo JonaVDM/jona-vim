@@ -9,10 +9,10 @@ require 'lspsaga'.setup {
   infor_sign = "",
   diagnostic_header_icon = "   ",
   -- code action title icon
-  code_action_icon = " ",
+  code_action_icon = "",
   code_action_prompt = {
     enable = true,
-    sign = true,
+    sign = false,
     sign_priority = 40,
     virtual_text = true,
   },

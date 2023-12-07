@@ -65,3 +65,10 @@ snippet formSubmit
 	function submit(event: Event) {
 		event.preventDefault();
 	}
+
+snippet refRecord
+	let $1 = ref<Record<string, string>>({});
+
+snippet ref
+	let $1 = ref($2);
+	$0

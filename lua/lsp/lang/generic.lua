@@ -2,7 +2,6 @@ local lsp = require 'lspconfig'
 local lsp_util = require 'lsp.util'
 
 local languages = {
-  'tsserver',
   'eslint',
   'gopls',
   'ansiblels',
@@ -10,7 +9,6 @@ local languages = {
   'dockerls',
   'yamlls',
   'jdtls',
-  'svelte',
   'tailwindcss',
   'intelephense',
   'dartls',

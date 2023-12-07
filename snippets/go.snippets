@@ -15,3 +15,20 @@ snippet test Generate a test case
 		}
 	}
 
+snippet convertToNumber
+	$1, _ := strconv.Atoi($2)
+
+snippet test
+	func Test$0(t *testing.T) {
+		tests := []struct {
+			in    int
+			out   int
+			label string
+		} {
+			{ 1, 2, "1 and 2" },	
+		}
+
+		for _, test := range tests {
+			assert.Equal(t, test.out, $0(test.in), test.label)
+		}
+	}

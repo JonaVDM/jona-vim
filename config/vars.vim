@@ -12,6 +12,7 @@ set ts=2
 set sw=2
 set et
 set splitright
+set scrolloff=5
 
 if has("mouse")
 	set mouse=a
