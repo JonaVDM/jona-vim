@@ -13,7 +13,9 @@ treesitter.setup({
     'html',
     'css',
     'php',
-    'python'
+    'python',
+    'http',
+    'json'
   },
   highlight = {
     enable = true,
