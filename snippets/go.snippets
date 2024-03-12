@@ -32,3 +32,13 @@ snippet test
 			assert.Equal(t, test.out, $0(test.in), test.label)
 		}
 	}
+
+snippet loop
+	for _, $1 := range $2 {
+		$0	
+	}
+
+snippet iferr
+	if err := $0; err != nil {
+		return err
+	}
