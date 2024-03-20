@@ -231,11 +231,11 @@ packer.startup(function(use)
       require 'plugins.config.doge'
     end
   }
-  use {
-    'rest-nvim/rest.nvim',
-    requires = { 'nvim-lua/plenary.nvim' },
-    config = function ()
-      require 'plugins.config.rest'
-    end
-  }
+  -- use {
+  --   'rest-nvim/rest.nvim',
+  --   requires = { 'nvim-lua/plenary.nvim' },
+  --   config = function ()
+  --     require 'plugins.config.rest'
+  --   end
+  -- }
 end)
