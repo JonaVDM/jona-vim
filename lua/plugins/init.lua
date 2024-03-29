@@ -156,6 +156,14 @@ packer.startup(function(use)
     end
   }
 
+  -- extra go stuff
+  use {
+    'fatih/vim-go',
+    config = function ()
+      require 'plugins.config.go'
+    end
+  }
+
   -- copilot (testing)
   use {
     'github/copilot.vim',
