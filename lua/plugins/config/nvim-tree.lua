@@ -11,6 +11,7 @@ require 'nvim-tree'.setup {
     width = 30,
   },
   hijack_cursor = true,
+  sync_root_with_cwd = true,
 }
 vim.api.nvim_set_keymap("n", "<c-b>", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 vim.api.nvim_create_autocmd("BufEnter", {
