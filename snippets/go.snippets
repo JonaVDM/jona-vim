@@ -47,3 +47,16 @@ snippet error
 	if err != nil {
 		return err
 	}
+
+snippet testapiclient
+	t.Run("", func(t *testing.T) {
+		server := httptest.NewServer(http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {
+			assert.Equal(t, "/api/", req.URL.String())
+			assert.Equal(t, "GET", req.Method)
+			// t.Error("server should not be called")
+
+			rw.Write([]byte(``))
+		}))
+		defer server.Close()
+	})
+
