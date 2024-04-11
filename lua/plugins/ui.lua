@@ -38,5 +38,13 @@ return {
      config = function()
        require "ibl".setup()
      end
+  -- },
+  -- {
+  --   'akinsho/bufferline.nvim',
+  --   version = "*",
+  --   dependencies = 'kyazdani42/nvim-web-devicons',
+  --   config = function()
+  --     require 'plugins.config.bufferline'
+  --   end
   }
 }

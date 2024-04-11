@@ -1,14 +1,6 @@
 return {
   -- Theme/ui stuff
   {
-    'akinsho/bufferline.nvim',
-    tag = "*",
-    dependencies = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require 'plugins.config.bufferline'
-    end
-  },
-  {
     'rcarriga/nvim-notify',
     dependencies = { 'nvim-telescope/telescope.nvim' },
     config = function()
