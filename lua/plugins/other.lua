@@ -2,7 +2,7 @@ return {
   -- Theme/ui stuff
   {
     'akinsho/bufferline.nvim',
-    tag = "v2.*",
+    tag = "*",
     dependencies = 'kyazdani42/nvim-web-devicons',
     config = function()
       require 'plugins.config.bufferline'
