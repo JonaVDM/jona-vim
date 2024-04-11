@@ -13,7 +13,7 @@ local languages = {
   'intelephense',
   'dartls',
   'pylsp',
-  'nil_ls'
+  'nixd'
 }
 
 for _, lang in ipairs(languages) do
