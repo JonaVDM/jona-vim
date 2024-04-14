@@ -7,10 +7,10 @@ return {
     end
   },
   {
-    'goolord/alpha-nvim',
-    config = function ()
-      require 'plugins.config.alpha'
-    end
+  "letieu/btw.nvim",
+    config = function()
+      require('btw').setup()
+    end,
   },
   {
     'norcalli/nvim-colorizer.lua',
