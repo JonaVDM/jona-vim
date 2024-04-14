@@ -8,6 +8,6 @@ vim.api.nvim_create_user_command('Json', '%!jq .', {})
 
 -- auto remove trailing white space from yaml files
 vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern='*.yml',
+  pattern='*.yml,*.nix',
   command = "%s/\\s\\+$//e"
 })
