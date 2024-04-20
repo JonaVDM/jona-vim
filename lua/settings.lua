@@ -11,3 +11,6 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   pattern='*.yml,*.nix',
   command = "%s/\\s\\+$//e"
 })
+
+-- add bicep
+vim.cmd [[ autocmd BufNewFile,BufRead *.bicep set filetype=bicep ]]

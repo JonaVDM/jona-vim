@@ -15,7 +15,8 @@ treesitter.setup({
     'php',
     'python',
     'http',
-    'json'
+    'json',
+    'bicep'
   },
   highlight = {
     enable = true,
