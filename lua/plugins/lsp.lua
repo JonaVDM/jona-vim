@@ -9,7 +9,7 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       'lukas-reineke/lsp-format.nvim',
-      'tami5/lspsaga.nvim',
+      'nvimdev/lspsaga.nvim',
       'hrsh7th/nvim-cmp',
       'onsails/lspkind.nvim',
       'hrsh7th/cmp-nvim-lsp',
@@ -20,6 +20,9 @@ return {
 
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
+
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons'
     },
     config = function()
       require 'lsp'

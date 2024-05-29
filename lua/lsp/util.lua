@@ -16,7 +16,6 @@ function M.OnAttach(client)
   map(0, "n", "gd", "<cmd>Lspsaga preview_definition<CR>", { silent = true, noremap = true })
   map(0, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
   map(0, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
-  client.resolved_capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
 end
 
 return M

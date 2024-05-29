@@ -39,3 +39,4 @@ vim.opt.laststatus = 3
 vim.opt.mousehide = true
 vim.opt.mouse = 'a'
 vim.opt.wrap = false
+vim.opt.signcolumn = 'yes'
