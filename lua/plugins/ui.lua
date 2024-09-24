@@ -43,4 +43,18 @@ return {
     end
   }
 
+  -- Fancy button bar thingy
+  {
+    'freddiehaddad/feline.nvim',
+    opts = {}
+  }
+
+  -- Show indentation
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+  }
 }
