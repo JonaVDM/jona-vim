@@ -57,10 +57,17 @@ return {
 
   -- Show indentation
   {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    ---@module 'ibl'
     ---@type ibl.config
     opts = {},
+  },
+
+  -- Make readme fancy
+  {
+    'lukas-reineke/headlines.nvim',
+    dependencies = 'nvim-treesitter/nvim-treesitter',
+    opts = {}
   },
 }
