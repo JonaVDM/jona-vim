@@ -15,7 +15,7 @@ return {
     config = function()
       require 'btw'.setup()
     end
-  }
+  },
 
   -- Filetree
   {
@@ -41,13 +41,19 @@ return {
       }
       vim.api.nvim_set_keymap("n", "<c-b>", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
     end
-  }
+  },
 
   -- Fancy button bar thingy
   {
     'freddiehaddad/feline.nvim',
     opts = {}
-  }
+  },
+
+  -- fancy top bar thingy
+  {
+    'akinsho/bufferline.nvim', 
+    dependencies = 'nvim-tree/nvim-web-devicons'
+  },
 
   -- Show indentation
   {
@@ -56,5 +62,5 @@ return {
     ---@module "ibl"
     ---@type ibl.config
     opts = {},
-  }
+  },
 }
