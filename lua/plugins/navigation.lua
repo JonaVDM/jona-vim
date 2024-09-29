@@ -39,5 +39,21 @@ return {
         },
       }
     end
-  }
+  },
+
+  -- quick switch files
+  {
+    'ThePrimeagen/harpoon',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    keys = {
+      { '<leader>a', ':lua require("harpoon.mark").add_file()<cr>' },
+      { '<leader>e', ':lua require("harpoon.ui").toggle_quick_menu()<cr>' },
+      { '<leader>1', ':lua require("harpoon.ui").nav_file(1)<cr>' },
+      { '<leader>2', ':lua require("harpoon.ui").nav_file(2)<cr>' },
+      { '<leader>3', ':lua require("harpoon.ui").nav_file(3)<cr>' },
+      { '<leader>4', ':lua require("harpoon.ui").nav_file(4)<cr>' },
+      { '<leader>4', ':lua require("harpoon.ui").nav_file(5)<cr>' },
+      { '<leader>4', ':lua require("harpoon.ui").nav_file(6)<cr>' },
+    },
+  },
 }
