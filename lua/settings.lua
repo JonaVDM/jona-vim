@@ -21,3 +21,6 @@ vim.opt.splitright = true
 -- other stuff
 vim.opt.updatetime = 300
 vim.opt.scrolloff = 5
+
+-- turn of text wrapping
+vim.opt.wrap = false
