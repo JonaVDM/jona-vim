@@ -24,3 +24,6 @@ vim.opt.scrolloff = 5
 
 -- turn of text wrapping
 vim.opt.wrap = false
+
+-- easy copy to clipboard (basically the defualt keybinding sucks)
+vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true })
