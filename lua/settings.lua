@@ -27,3 +27,6 @@ vim.opt.wrap = false
 
 -- easy copy to clipboard (basically the defualt keybinding sucks)
 vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true })
+
+-- Custom command for quick json formatting - needs jq to be installed
+vim.api.nvim_create_user_command('Json', '%!jq .', {})
