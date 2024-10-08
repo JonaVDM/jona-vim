@@ -9,4 +9,15 @@ return {
     opts = {},
   },
 
+  -- Toggle booleans
+  {
+    'rmagatti/alternate-toggler',
+    config = function()
+      require("alternate-toggler").setup {}
+    end,
+    keys = {
+      { '<leader><space>', '<cmd>lua require("alternate-toggler").toggleAlternate()<CR>' },
+    }
+  },
+
 }
