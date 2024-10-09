@@ -2,6 +2,8 @@ local cmp = require 'cmp'
 local lspkind = require 'lspkind'
 local luasnip = require 'luasnip'
 
+require("copilot_cmp").setup()
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -35,7 +37,7 @@ cmp.setup {
     { name = 'luasnip' }, -- For luasnip users.
     { name = 'nvim_lsp' },
     { name = 'nvim_lsp_signature_help' },
-    { name = 'orgmode' }
+    { name = 'copilot' },
   }, {
     { name = 'buffer' },
   }),
@@ -43,6 +45,7 @@ cmp.setup {
     format = lspkind.cmp_format({
       mode = 'symbol',
       maxwidth = 50,
+      symbol_map = { Copilot = "" },
     })
   },
   experimental = {
