@@ -82,7 +82,17 @@ return {
       local configs = require 'nvim-treesitter.configs'
 
       configs.setup({
-        ensure_installed = {  'lua', 'vimdoc', 'javascript', 'html', 'go' },
+        ensure_installed = {
+          'dart',
+          'go',
+          'html',
+          'javascript',
+          'lua',
+          'rust',
+          'svelte',
+          'vimdoc',
+          'vue',
+        },
         sync_install = false,
         highlight = { enable = true },
         indent = { enable = true },  

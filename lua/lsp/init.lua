@@ -25,8 +25,18 @@ end
 -- (the ones that don't any fancy config)
 --
 local generic_languages = {
+  'cssls',
+  'dockerls',
+  'eslint',
   'gopls', 
-  'nixd'
+  'html',
+  'nixd',
+  'svelte',
+  'tailwindcss',
+  'ts_ls',
+  'volar',
+  'vuels',
+  'yamlls',
 }
 
 for _, lang in ipairs(generic_languages) do
