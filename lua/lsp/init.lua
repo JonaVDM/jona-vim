@@ -37,6 +37,7 @@ local generic_languages = {
   'volar',
   'vuels',
   'yamlls',
+  'dartls'
 }
 
 for _, lang in ipairs(generic_languages) do
