@@ -30,7 +30,6 @@ local generic_languages = {
   'eslint',
   'gopls', 
   'html',
-  'nixd',
   'svelte',
   'tailwindcss',
   'ts_ls',
@@ -46,3 +45,19 @@ for _, lang in ipairs(generic_languages) do
     on_attach = onAttach,
   }
 end
+
+-- Setup nix
+lsp.nixd.setup {
+  cmd = { "nixd" },
+  on_attach = onAttach,
+  settings = {
+    nixd = {
+      nixpkgs = {
+        expr = "import <nixpkgs> { }",
+      },
+      formatting = {
+        command = { "alejandra" },
+      },
+    },
+  },
+}
